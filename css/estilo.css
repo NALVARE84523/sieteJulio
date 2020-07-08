@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e9ecf4;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+
+    grid-template-areas: 
+                         "contenido  contenido  sidebar"
+                         "lista1     lista2     sidebar"
+                         "widget-1   widget-2   sidebar"
+                         "imagen     imagen     sidebar"
+                         "imagen     imagen     sidebar"
+                         "footer     footer     footer";
+}
+
+
+.contenedor0 > nav,
+.contenedor0 .item1,
+.contenedor0 .item2,
+.contenedor0 .item3,
+.contenedor0 .item4 {
+    background: tomato;
+}
+
+
+.contenedor > div,
+.contenedor .contenido,
+.contenedor .lista1,
+.contenedor .lista2,
+.contenedor .imagen,
+.contenedor .sidebar,
+.contenedor .footer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header {
+    display: inline-flexbox;
+    background: #12203e;
+    color: #fff;
+    grid-area: header;
+    /* grid-column-start: 1;
+    grid-column-end: -1; */
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+    /* grid-column: span 2; */
+}
+
+.contenedor .sidebar {
+    grid-column: 3 / 4;
+    background: #faa43D;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+    /* grid-row: span 2; */
+}
+
+.contenedor .widget-1, 
+.contenedor .widget-2 {
+    background: #55a8fd;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1 {
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+    grid-area: widget-2;
+}
+
+.contenedor .footer {
+    background: #12203e;
+    color: #fff;
+    grid-area: footer;
+
+
+    /* grid-column: span 3; */
+}
+/* 
+@media screen and (max-width: 768px) {
+    /* body {
+        background: #000;
+    } */
+
+    /* .contenedor .contenido {
+        grid-column: 1 / -1;
+    }
+    .contenedor .sidebar {
+        grid-column: 1 / -1;
+    }
+
+    .contenedor .widget-1 {
+        grid-column: span 2; */
+    /* }
+} */
+
+@media screen and (max-width: 768px){
+    .contenedor {
+        grid-template-areas: "header     header     header"
+                            "contenido  contenido  contenido"
+                            "sidebar    sidebar    sidebar"
+                            "widget-1   widget-1   widget-2"
+                            "footer     footer     footer";
+    }
+}
+
+p:nth-child(1):hover{
+    color: #187dac;
+}
+
+p:nth-child(2):hover{
+    color: #a00000;
+}
+
+p:nth-child(3):hover{
+    color: #00d600;
+}
+
+.lista1{
+    grid-area: lista1;
+    text-align: center;
+    
+}
+
+.lista2{
+    grid-area: lista2;
+    text-align: center;
+}
+
+#imagen{
+    background-image: url(https://www.xtrafondos.com/wallpapers/atardecer-56.jpg);
+    grid-area: imagen;
+    border-style: solid;
+    padding: 50%;
+    text-align: left;
+}
+#id1:hover{
+    background-color: blue;
+}
+#id2:hover{
+    background-color: rgb(0, 163, 82);
+}
+#id3:hover{
+    background-color: rgb(180, 0, 0);
+}
+#id4:hover{
+    background-color: rgb(255, 157, 0);
+}
+#id5:hover{
+    background-color: rgb(0, 225, 255);
+}
+#id6:hover{
+    background-color: rgb(194, 0, 161);
+}
+#id7:hover{
+    background-color: rgb(176, 216, 0);
+}
